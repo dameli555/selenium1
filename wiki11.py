@@ -94,7 +94,7 @@ driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 # check visibility of down page logos
 wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@class="footer"]')))
 print ("Footer is visible")
-
+#Assret if Support and donation text is correct
 x = driver.find_element(By.XPATH,'//*[@class="footer-sidebar-text jsl10n"]').text
 print (x)
 assert x == 'Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range of other projects.'
